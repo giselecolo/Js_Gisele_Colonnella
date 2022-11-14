@@ -4,15 +4,16 @@ let modalBody = document.getElementById("modal-body")
 let botonCarrito = document.getElementById("botonCarrito")
 let divCompra = document.getElementById("precioTotal")
 let buscador = document.getElementById("buscador")
-
+let selectOrden = document.getElementById("selectOrden")
 
 //creo las cards con js y las pusheo
 function mostrarCatalogo(array){
     divProductos.innerHTML = ""
     for(let cuaderno of array){
         let nuevoProducto = document.createElement("div")
+        nuevoProducto.classList.add("col-12", "col-md-6", "col-lg-4", "my-1")
         nuevoProducto.innerHTML = `<div id="${cuaderno.id}" class="card" style="width: 18rem;">
-                                    <img class="card-img-top img-fluid" style="height: 200px;"src="assets/${cuaderno.imagen}" alt="${cuaderno.presentacion} de ${cuaderno.nombreProducto}">
+                                    <img class="card-img-top img-fluid" style="height: 200px;"src="img/${cuaderno.imagen}" alt="${cuaderno.presentacion} de ${cuaderno.nombreProducto}">
                                     <div class="card-body">
                                         <h4 class="card-presentacion">${cuaderno.presentacion}</h4>
                                         <p>Producto: ${cuaderno.nombreProducto}</p>
@@ -27,6 +28,8 @@ function mostrarCatalogo(array){
         })
     }
 }
+    
+
 //los pusheo 
 function agregarAlCarrito(cuaderno){
     productosEnCarrito.push(cuaderno)
@@ -39,7 +42,7 @@ function cargarProductosCarrito(array){
     array.forEach((productoCarrito)=>{
         modalBody.innerHTML += `
         <div class="card  mb-3" id ="productoCarrito${productoCarrito.id}" style="max-width: 440px;">
-            <img class="card-img-top" height="100px" src="assets/${productoCarrito.imagen}" alt="${productoCarrito.nombreProducto}">
+            <img class="card-img-top" height="100px" src="img/${productoCarrito.imagen}" alt="${productoCarrito.nombreProducto}">
             <div class="card-body">
                     <h4 class="card-presentacion">${productoCarrito.presentacion}</h4>
                     <p class="card-text">$${productoCarrito.precio}</p> 
@@ -116,6 +119,7 @@ buscador.addEventListener("input", ()=>{buscarInfo(buscador.value, listadoProduc
 botonCarrito.addEventListener("click", ()=>{
     cargarProductosCarrito(productosEnCarrito)
 }) 
+
 mostrarCatalogo(listadoProductos)
 
 
