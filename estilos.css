@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100;200;300;400;500;600;700&family=Pacifico&display=swap');
+
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body{
+    color: black;
+    background-color: #ffe7f4;
+}
+.navbar{
+    background-color: #ee99c9;
+    font-family: 'Arima', cursive;
+}
+#navbarColor01{
+    
+    display: flex;
+    justify-content: right;
+   
+}
+.nav-item{
+    text-decoration: none;
+}
+
+h1{
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    font-size: 32px;
+    color: black;
+    margin: 16px;
+}
+.personalizados{
+    font-family: 'Arima', cursive;
+    font-size: 20px;
+    font-style: normal;
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+    margin: 20px;
+}
+h5{
+    color: rgb(28, 27, 27);
+}
+
+.btn{
+    text-decoration: none;
+    color: black;
+    padding: 6px;
+    background-color: #ffc1d5;
+    border-radius: 5px;
+    font-family: 'Arima', cursive;
+    font-size: 18px;
+}
+/*Card*/
+#Productos{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.card{
+    width: 90%;
+    max-width: 350px;
+    margin: 1rem auto;
+    border: 1px solid black;
+    
+    text-align: center;
+    background-color: white;
+    max-height: 700px;
+}
+.card-presentacion{
+    font-family: 'Arima', cursive;
+    font-size: 22px;
+    font-style: normal;
+    text-align: left;
+    color: black;
+    padding-left: 5px;
+}
+.card img{
+    width: 300px;
+    height: 300px;
+    border-top-right-radius: 10px;
+}
+.content{
+    padding: 1rem;
+    font-size: 1rem;
+}
+.card-body p{
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    font-size: 18px;
+    color: black;
+    margin: 16px;
+}
